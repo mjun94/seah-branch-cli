@@ -258,10 +258,10 @@ $ -branch
 
 ```bash
 # Yarn
-yarn global upgrade @/branch-cli
+yarn global upgrade @seahworks/branch-cli
 
 # npm
-npm update -g @/branch-cli
+npm update -g @seahworks/branch-cli
 ```
 
 ## 문제 해결
@@ -337,7 +337,7 @@ PATH 설정이 어려운 경우:
 #### npx 사용 (npm 설치 시)
 
 ```bash
-npx @/branch-cli
+npx @seahworks/branch-cli
 ```
 
 #### 전체 경로로 실행
