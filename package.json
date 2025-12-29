@@ -1,6 +1,6 @@
 {
   "name": "@seahworks/branch-cli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "세아웍스 Git 브랜치 네이밍 규칙 준수 도구",
   "type": "module",
   "main": "./src/index.js",
