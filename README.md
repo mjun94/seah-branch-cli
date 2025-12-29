@@ -1,4 +1,4 @@
-# @seah/branch-cli
+# @seahworks/branch-cli
 
 세아웍스 Git 브랜치 네이밍 규칙을 준수하는 브랜치를 쉽게 생성하는 CLI 도구입니다.
 
@@ -15,13 +15,13 @@
 ### Yarn (권장)
 
 ```bash
-yarn global add @seah/branch-cli
+yarn global add @seahworks/branch-cli
 ```
 
 ### npm
 
 ```bash
-npm install -g @seah/branch-cli
+npm install -g @seahworks/branch-cli
 ```
 
 ## 환경별 추가 설정
@@ -91,7 +91,7 @@ git checkout dev_06MON
 ### 2. CLI 도구 실행
 
 ```bash
-seah-branch
+-branch
 ```
 
 도구가 자동으로 다음을 확인합니다:
@@ -162,7 +162,7 @@ feature/2024/board/etc/1229
 ### ✅ 정상 진행
 
 ```bash
-$ seah-branch
+$ -branch
 
 🌿 세아웍스 브랜치 생성 도구
 
@@ -189,7 +189,7 @@ $ seah-branch
 ### ❌ dev 브랜치가 아닌 경우
 
 ```bash
-$ seah-branch
+$ -branch
 
 🌿 세아웍스 브랜치 생성 도구
 
@@ -206,7 +206,7 @@ $ seah-branch
 ### ⚠️ Pull이 필요한 경우
 
 ```bash
-$ seah-branch
+$ -branch
 
 🌿 세아웍스 브랜치 생성 도구
 
@@ -228,7 +228,7 @@ $ seah-branch
 ### ⚠️ Push가 필요한 경우
 
 ```bash
-$ seah-branch
+$ -branch
 
 🌿 세아웍스 브랜치 생성 도구
 
@@ -258,15 +258,15 @@ $ seah-branch
 
 ```bash
 # Yarn
-yarn global upgrade @seah/branch-cli
+yarn global upgrade @/branch-cli
 
 # npm
-npm update -g @seah/branch-cli
+npm update -g @/branch-cli
 ```
 
 ## 문제 해결
 
-### command not found: seah-branch
+### command not found: -branch
 
 #### Windows - Git Bash
 
@@ -280,7 +280,7 @@ echo "export PATH=\"$YARN_BIN:\$PATH\"" >> ~/.bashrc
 source ~/.bashrc
 
 # 확인
-seah-branch
+-branch
 ```
 
 #### Windows - PowerShell/CMD
@@ -337,7 +337,7 @@ PATH 설정이 어려운 경우:
 #### npx 사용 (npm 설치 시)
 
 ```bash
-npx @seah/branch-cli
+npx @/branch-cli
 ```
 
 #### 전체 경로로 실행
@@ -345,19 +345,19 @@ npx @seah/branch-cli
 **Windows - Git Bash:**
 
 ```bash
-"/c/Users/YourName/AppData/Local/Yarn/bin/seah-branch"
+"/c/Users/YourName/AppData/Local/Yarn/bin/-branch"
 ```
 
 **Windows - PowerShell/CMD:**
 
 ```bash
-C:\Users\YourName\AppData\Local\Yarn\bin\seah-branch
+C:\Users\YourName\AppData\Local\Yarn\bin\-branch
 ```
 
 **macOS / Linux:**
 
 ```bash
-$(yarn global bin)/seah-branch
+$(yarn global bin)/-branch
 ```
 
 #### package.json 스크립트
@@ -367,7 +367,7 @@ $(yarn global bin)/seah-branch
 ```json
 {
   "scripts": {
-    "branch": "seah-branch"
+    "branch": "-branch"
   }
 }
 ```
