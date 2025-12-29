@@ -47,7 +47,7 @@ feature/2024/appr/aaaa0000000/1229-sr2612-01234
 
 ## 요구사항
 
-- Node.js 22 이상
+- Node.js 18 이상
 - Git
 - Yarn 또는 npm
 
