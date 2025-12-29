@@ -25,3 +25,6 @@ Thumbs.db
 # CI/CD
 .github/
 .gitlab-ci.yml
+
+# npm
+.npmrc
