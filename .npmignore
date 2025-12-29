@@ -1,0 +1,27 @@
+# Source control
+.git/
+.gitignore
+
+# Development
+.vscode/
+.idea/
+test/
+tests/
+*.test.js
+coverage/
+
+# Yarn
+.yarn/
+.yarnrc.yml
+yarn.lock
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# CI/CD
+.github/
+.gitlab-ci.yml
