@@ -91,7 +91,7 @@ git checkout dev_06MON
 ### 2. CLI 도구 실행
 
 ```bash
--branch
+seah-branch
 ```
 
 도구가 자동으로 다음을 확인합니다:
