@@ -17,11 +17,11 @@ export const config = {
   ],
 
   companies: [
-    { name: "세아홀딩스", value: "aaaa0000000" },
-    { name: "세아베스틸지주", value: "aamw0000000" },
-    { name: "세아베스틸", value: "aaaw0000000" },
-    { name: "세아창원특수강", value: "aabw0000000" },
-    { name: "세아제강지주", value: "aaeb0000000" },
-    { name: "세아제강", value: "aaab0000000" },
+    { name: "세아홀딩스", value: "AAAA0000000" },
+    { name: "세아베스틸지주", value: "AAMW0000000" },
+    { name: "세아베스틸", value: "AAAW0000000" },
+    { name: "세아창원특수강", value: "AABW0000000" },
+    { name: "세아제강지주", value: "AAEB0000000" },
+    { name: "세아제강", value: "AAAB0000000" },
   ],
 };
