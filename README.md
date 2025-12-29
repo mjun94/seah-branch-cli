@@ -139,13 +139,13 @@ seah-branch
 **티켓 번호가 있는 경우:**
 
 ```
-feature/2024/appr/aaaa0000000/1229-sr2612-01234
+feature/2025/appr/AAAA/1229-sr2612-01234
 ```
 
 **티켓 번호가 없는 경우:**
 
 ```
-feature/2024/board/etc/1229
+feature/2025/board/etc/1229
 ```
 
 ### 구성 요소
@@ -153,7 +153,7 @@ feature/2024/board/etc/1229
 - `type`: feature, hotfix, bugfix
 - `year`: 자동으로 현재 연도 (예: 2024)
 - `module`: cmn, appr, org, emp, board, admin, selis, setis
-- `company`: aaaa0000000, aamw0000000, aaaw0000000, aabw0000000, aaeb0000000, aaab0000000, etc
+- `company`: AAAA, AAMW, AAAW, AABW, AAEB, AAAB, etc
 - `mmdd`: 자동으로 오늘 날짜 (예: 1229)
 - `sr-number`: SR2601-01234 또는 ITS2601-01234 (선택사항)
 
@@ -179,11 +179,11 @@ $ -branch
 ? 회사를 선택하세요: 세아홀딩스
 ? SR/ITS 또는 티켓 번호를 입력하세요: SR2601-01234
 
-생성할 브랜치: feature/2024/appr/aaaa0000000/1229-sr2601-01234
+생성할 브랜치: feature/2025/appr/AAAA/1229-sr2601-01234
 
 ? 이 브랜치를 생성하시겠습니까? Yes
 
-✅ 브랜치 생성 완료: feature/2024/appr/aaaa0000000/1229-sr2601-01234
+✅ 브랜치 생성 완료: feature/2025/appr/AAAA/1229-sr2601-01234
 ```
 
 ### ❌ dev 브랜치가 아닌 경우
