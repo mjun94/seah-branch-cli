@@ -23,6 +23,5 @@ export const config = {
     { name: "세아창원특수강", value: "AABW0000000" },
     { name: "세아제강지주", value: "AAEB0000000" },
     { name: "세아제강", value: "AAAB0000000" },
-    { name: "기타", value: "etc" },
   ],
 };

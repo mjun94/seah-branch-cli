@@ -28,6 +28,3 @@ npm-debug.log*
 # Test
 coverage/
 .nyc_output/
-
-# npm
-.npmrc

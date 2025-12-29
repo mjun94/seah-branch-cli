@@ -13,16 +13,11 @@ function getTodayMMDD() {
 
 // SR/ITS 번호 검증
 function validateSRNumber(value) {
-  // 빈 값 허용
-  if (!value || value.trim() === "") {
-    return true;
-  }
-
   const pattern = /^(SR|ITS)\d{4}-\d{5}$/i;
   if (pattern.test(value)) {
     return true;
   }
-  return "SR2601-01234 또는 ITS2601-01234 형식으로 입력하거나 빈 값으로 남겨두세요";
+  return "SR2601-01234 또는 ITS2601-01234 형식으로 입력하세요";
 }
 
 async function createBranch() {
@@ -48,28 +43,16 @@ async function createBranch() {
     });
 
     // SR/ITS 번호 입력
-    const srNumberInput = await input({
-      message: "SR/ITS 또는 티켓 번호를 입력하세요 (없으면 Enter):",
+    const srNumber = await input({
+      message: "SR/ITS 번호를 입력하세요 (예: SR2601-01234):",
       validate: validateSRNumber,
-      transformer: (value) => {
-        if (!value || value.trim() === "") {
-          return "없음";
-        }
-        return value.toUpperCase();
-      },
+      transformer: (value) => value.toUpperCase(),
     });
 
     // 브랜치명 생성
     const year = new Date().getFullYear();
     const date = getTodayMMDD();
-
-    // SR 번호가 없으면 브랜치명에서 제외
-    let branchName;
-    if (!srNumberInput || srNumberInput.trim() === "") {
-      branchName = `${type}/${year}/${module}/${company}/${date}`;
-    } else {
-      branchName = `${type}/${year}/${module}/${company}/${date}-${srNumberInput.toLowerCase()}`;
-    }
+    const branchName = `${type}/${year}/${module}/${company}/${date}-${srNumber.toLowerCase()}`;
 
     console.log(chalk.yellow(`\n생성할 브랜치: ${branchName}\n`));
 

@@ -1,5 +1,5 @@
 {
-  "name": "@seahworks/branch-cli",
+  "name": "@seah/branch-cli",
   "version": "1.0.0",
   "description": "세아웍스 Git 브랜치 네이밍 규칙 준수 도구",
   "type": "module",
