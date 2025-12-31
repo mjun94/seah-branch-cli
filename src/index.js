@@ -11,6 +11,17 @@ function getTodayMMDD() {
   return `${month}${day}`;
 }
 
+// Git 사용자 이름 가져오기
+function getGitUserName() {
+  try {
+    const name = execSync("git config user.name", { encoding: "utf-8" }).trim();
+    return name;
+  } catch (error) {
+    console.error(chalk.yellow("⚠️  Git user.name을 가져올 수 없습니다."));
+    return null;
+  }
+}
+
 // SR/ITS 번호 검증
 function validateSRNumber(value) {
   return true;
@@ -164,6 +175,17 @@ async function createBranch() {
   // 브랜치 검증 및 준비
   await validateAndPrepareBranch();
 
+  // Git 사용자 이름 가져오기
+  const gitUserName = getGitUserName();
+  if (!gitUserName) {
+    console.log(chalk.red("❌ Git user.name이 설정되지 않았습니다."));
+    console.log(chalk.yellow("다음 명령어로 설정하세요:"));
+    console.log(chalk.cyan('  git config --global user.name "Your Name"\n'));
+    process.exit(1);
+  }
+
+  console.log(chalk.blue(`👤 생성자: ${gitUserName}\n`));
+
   try {
     // 브랜치 타입 선택
     const type = await select({
@@ -199,12 +221,18 @@ async function createBranch() {
     const year = new Date().getFullYear();
     const date = getTodayMMDD();
 
+    // 사용자 이름을 소문자로 변환 (공백 제거, 특수문자 제거)
+    const userName = gitUserName
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .replace(/[^a-z0-9-]/g, "");
+
     // SR 번호가 없으면 브랜치명에서 제외
     let branchName;
     if (!srNumberInput || srNumberInput.trim() === "") {
-      branchName = `${type}/${year}/${module}/${company}/${date}`;
+      branchName = `${type}/${year}/${module}/${company}/${date}-${userName}`;
     } else {
-      branchName = `${type}/${year}/${module}/${company}/${date}-${srNumberInput.toLowerCase()}`;
+      branchName = `${type}/${year}/${module}/${company}/${date}-${srNumberInput.toLowerCase()}-${userName}`;
     }
 
     console.log(chalk.yellow(`\n생성할 브랜치: ${branchName}\n`));

@@ -131,7 +131,8 @@ seahseah-branch
 생성되는 브랜치는 다음 형식을 따릅니다:
 
 ```
-{type}/{year}/{module}/{company}/{mmdd}-{sr-number}
+{type}/{year}/{module}/{company}/{mmdd}-{sr-number}-{creator}
+
 ```
 
 ### 예시
@@ -139,13 +140,13 @@ seahseah-branch
 **티켓 번호가 있는 경우:**
 
 ```
-feature/2025/appr/AAAA/1229-sr2612-01234
+feature/2025/appr/AAAA/1229-sr2612-01234-honggildong
 ```
 
 **티켓 번호가 없는 경우:**
 
 ```
-feature/2025/board/etc/1229
+feature/2025/board/etc/1229-honggildong
 ```
 
 ### 구성 요소
