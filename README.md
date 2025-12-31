@@ -91,7 +91,7 @@ git checkout dev_06MON
 ### 2. CLI 도구 실행
 
 ```bash
-seah-branch
+seahseah-branch
 ```
 
 도구가 자동으로 다음을 확인합니다:
@@ -162,7 +162,7 @@ feature/2025/board/etc/1229
 ### ✅ 정상 진행
 
 ```bash
-$ -branch
+$ seah-branch
 
 🌿 세아웍스 브랜치 생성 도구
 
@@ -189,7 +189,7 @@ $ -branch
 ### ❌ dev 브랜치가 아닌 경우
 
 ```bash
-$ -branch
+$ seah-branch
 
 🌿 세아웍스 브랜치 생성 도구
 
@@ -206,7 +206,7 @@ $ -branch
 ### ⚠️ Pull이 필요한 경우
 
 ```bash
-$ -branch
+$ seah-branch
 
 🌿 세아웍스 브랜치 생성 도구
 
@@ -228,7 +228,7 @@ $ -branch
 ### ⚠️ Push가 필요한 경우
 
 ```bash
-$ -branch
+$ seah-branch
 
 🌿 세아웍스 브랜치 생성 도구
 
@@ -266,7 +266,7 @@ npm update -g @seahworks/branch-cli
 
 ## 문제 해결
 
-### command not found: -branch
+### command not found: seah-branch
 
 #### Windows - Git Bash
 
@@ -280,7 +280,7 @@ echo "export PATH=\"$YARN_BIN:\$PATH\"" >> ~/.bashrc
 source ~/.bashrc
 
 # 확인
--branch
+seah-branch
 ```
 
 #### Windows - PowerShell/CMD
@@ -345,19 +345,19 @@ npx @seahworks/branch-cli
 **Windows - Git Bash:**
 
 ```bash
-"/c/Users/YourName/AppData/Local/Yarn/bin/-branch"
+"/c/Users/YourName/AppData/Local/Yarn/bin/seah-branch"
 ```
 
 **Windows - PowerShell/CMD:**
 
 ```bash
-C:\Users\YourName\AppData\Local\Yarn\bin\-branch
+C:\Users\YourName\AppData\Local\Yarn\bin\seah-branch
 ```
 
 **macOS / Linux:**
 
 ```bash
-$(yarn global bin)/-branch
+$(yarn global bin)/seah-branch
 ```
 
 #### package.json 스크립트
@@ -367,7 +367,7 @@ $(yarn global bin)/-branch
 ```json
 {
   "scripts": {
-    "branch": "-branch"
+    "branch": "seah-branch"
   }
 }
 ```
