@@ -17,12 +17,13 @@ export const config = {
   ],
 
   companies: [
+    { name: "공통", value: "CMN" },
     { name: "세아홀딩스", value: "AAAA" },
     { name: "세아베스틸지주", value: "AAMW" },
     { name: "세아베스틸", value: "AAAW" },
     { name: "세아창원특수강", value: "AABW" },
     { name: "세아제강지주", value: "AAEB" },
     { name: "세아제강", value: "AAAB" },
-    { name: "기타", value: "etc" },
+    { name: "그 외 계열사", value: "etc" },
   ],
 };
