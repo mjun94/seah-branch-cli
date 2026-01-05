@@ -384,3 +384,25 @@ npm run branch
 ## 라이선스
 
 MIT
+
+**배포 (Publish to npm)**
+
+- **사전 확인:** `package.json`의 `name`과 `version`을 확인하세요.
+- **로그인 확인:** `npm whoami`로 로그인 상태를 확인하세요.
+- **토큰 설정:** 로컬에서 환경변수로 토큰을 설정하거나 `.env`에 `NPM_TOKEN`을 두고 로드하세요.
+
+```bash
+# 예: 환경변수로 설정 (macOS / Linux / Zsh)
+export NPM_TOKEN=your_actual_token_here
+
+# 또는 .env 파일을 사용했다면 로드
+export $(cat .env | xargs)
+```
+
+- **배포 명령:** 공개 패키지로 배포하려면 아래를 실행하세요.
+
+```bash
+npm publish --access public
+```
+
+- **참고:** CI 환경에서는 레지스트리의 시크릿(NPM token)을 `NPM_TOKEN`으로 설정하고, 빌드 스크립트에서 환경변수를 로드한 뒤 같은 명령을 사용하세요.
